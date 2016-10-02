@@ -17,6 +17,7 @@ type TestRoutes =
   :<|> "formUrlEncodedTest" :> ReqBody '[FormUrlEncoded] SomeData :> Post '[FormUrlEncoded] SomeData
   :<|> "0.8.1" :> Raw
   :<|> "0.9" :> Raw
+  :<|> "primop" :> Raw
 
 
 data SomeData = Stuff { foo :: Int, bar :: String}
@@ -45,6 +46,7 @@ server =
   :<|> return
   :<|> serveDirectory "../client-0.8.1/dist/build/client/client.jsexe"
   :<|> serveDirectory "../client-0.9/dist/build/client/client.jsexe"
+  :<|> serveDirectory "../ghcjs-unhandled-primop/dist/build/client/client.jsexe"
 
 testRoutesAPI :: Proxy TestRoutes
 testRoutesAPI = Proxy
