@@ -27,7 +27,7 @@ uncaught exception in Haskell main thread: unhandled primop: CopyByteArrayToAddr
 
 This error is reproduced in the `ghcjs-unhandled-primop` cabal project. When the server is running and that project has been built, it can be run by going to the following URL:
 
-[http://localhost:8081/0.9/](http://localhost:8081/primop/)
+[http://localhost:8081/primop/](http://localhost:8081/primop/)
 
 
 Note: The interesting stuff happens in the console.
